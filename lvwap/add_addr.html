@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>选择出行人</title>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-weui.css" />
+		<link rel="stylesheet" type="text/css" href="css/addr.css" />
+	</head>
+
+	<body>
+		<div class="editAddr">
+			<div class="addr_header">
+				<a class="lefta icon iconfont icon-jiantou" href="javascript:history.go(-1)"></a>
+				<h1>新建收货地址</h1>
+			</div>
+			<div class="sheet">
+				<div class="item">
+					<span class="item_text">收货人姓名</span>
+					<input type="text" value="" placeholder="请填写收货人姓名" id="name" />
+				</div>
+				<div class="item">
+					<span class="item_text">手机号码</span>
+					<input type="tel" value="" placeholder="请输入手机号码" id="mobile" />
+				</div>
+				<div class="item">
+					<span class="item_text">所在地区</span>
+                    <div><input type='text' id='city-picker' placeholder='请选择省市区县' /></div>
+				</div>
+				<div class="item l-item">
+					<span class="l_item_text">详细地址</span>
+					<textarea placeholder="请输入详细地址"></textarea>
+				</div>
+				<div class="c-item">
+					<span class="c_item_text">类型</span>
+					<span class="btn_radio">
+                        <input type="radio" id="leixin1" name="leixin" class="checked" checked="checked" />
+                        <label for="leixin1">家</label>
+                    </span>
+					<span class="btn_radio">
+                        <input type="radio" id="leixin2" name="leixin" />
+                        <label for="leixin2">公司</label>
+                    </span>
+				</div>
+			</div>
+			<div class="submit">保存</div>
+		</div>
+
+	</body>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/jquery-weui.js"></script>
+    <script type="text/javascript" src="js/city-picker.js"></script>
+    <script>
+    $("#city-picker").cityPicker({
+        title: "选择省市区/县",
+        onChange: function (picker, values, displayValues) {
+            console.log(values, displayValues);
+        }
+    });
+</script>
+</html>
+
+</body>
+
+</html>
